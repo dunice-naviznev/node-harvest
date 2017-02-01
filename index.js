@@ -122,6 +122,7 @@ module.exports = Harvest = function (opts) {
     var InvoiceMessages = require('./lib/invoice-messages');
     var InvoicePayments = require('./lib/invoice-payments');
     var InvoiceCategories = require('./lib/invoice-categories');
+    var TimeReporting = require('./lib/time-reporting');
 
     this.Account = new Account(this);
     this.TimeTracking = new TimeTracking(this);
@@ -139,6 +140,7 @@ module.exports = Harvest = function (opts) {
     this.InvoiceMessages = new InvoiceMessages(this);
     this.InvoicePayments = new InvoicePayments(this);
     this.InvoiceCategories = new InvoiceCategories(this);
-
+    this.TimeReporting = new TimeReporting(this);
+    
     return this;
 };
